@@ -25,24 +25,11 @@ const GridContainer = () => {
 
   return (
     <main>
-      <div className="block__top">
         {
           colors.map((color, index) => {
-            if (index < 4) {
-              return <Box key={index} color={color} shuffleClick={clickHandler} text={index + 1} classes={`item${index + 1}`} />
-            }
+            return <Box key={index} color={color} shuffleClick={clickHandler} text={index + 1} classes={`item${index + 1}`} />
           })
         }
-      </div>
-      <div className="block__bottom">
-        {
-          colors.map((color, index) => {
-            if (index > 3) {
-              return <Box key={index} color={color} shuffleClick={clickHandler} text={index + 1} classes={`item${index + 1}`} />
-            }
-          })
-        }
-      </div>
     </main>
   );
 };
